@@ -1,4 +1,4 @@
-"""Offline IT support evidence lab. Python standard library only."""
+"""Offline workplace systems evidence lab. Python standard library only."""
 import argparse
 import csv
 import hashlib
@@ -89,12 +89,12 @@ def export(result, folder):
                    for f in result['findings'])
     page = '''<!doctype html><html lang="en"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IT Support Operations Lab — Evidence Report</title>
+<title>Workplace Systems Lab — Evidence Report</title>
 <style>body{font:16px system-ui;background:#eef3fa;color:#15263c;margin:0;padding:4vw}
 main{max-width:1300px;margin:auto}h1{font-size:36px}aside{background:#123455;color:white;padding:24px;border-radius:12px}
 table{border-collapse:collapse;background:white;width:100%;margin-top:24px}th,td{text-align:left;padding:14px;border-bottom:1px solid #d9e2ee;vertical-align:top}
 th{background:#dce8f7}.scroll{overflow:auto}footer{margin-top:24px;color:#43556c}</style><main>
-<p>PORTFOLIO / IT OPERATIONS / OFFLINE LAB</p><h1>Employee access & endpoint review</h1>
+<p>WORKPLACE SYSTEMS / OPERATIONS / OFFLINE LAB</p><h1>Employee access & endpoint review</h1>
 <aside>SIMULATED DATA — No live systems connected. Findings are review tasks, not proof of compliance.<br>
 As of: ASOF · USERS users · ASSETS assets · COUNT findings · $SAVINGS/month potential seat savings</aside>
 <div class="scroll"><table><thead><tr><th>Severity</th><th>Control</th><th>Subject</th><th>Finding</th><th>Next action</th></tr></thead>

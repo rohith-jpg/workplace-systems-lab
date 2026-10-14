@@ -2,9 +2,9 @@
 
 Use these bullets after running the project, completing the exercises and being able to explain the code and decisions. List under **Projects**, not employment. Do not describe generated work as professional experience.
 
-**IT Support Operations Lab | Python, CSV, Access Reviews, Asset Management | Independent Project**
+**Workplace Systems Lab | Python, CSV, Access Reviews, Asset Management | Independent Project**
 
-- Built and tested an offline IT support review tool covering 6 fictional users and 6 Windows, macOS and Linux assets; generated 13 prioritized findings across access, endpoint posture, licenses and ticket queues.
+- Built and tested an offline systems review tool covering 6 fictional users and 6 Windows, macOS and Linux assets; generated 13 prioritized findings across access, endpoint posture, licenses and ticket queues.
 - Flagged departed-user access, missing MFA, unverified endpoint protections and three potentially reclaimable SaaS seats totaling $39/month in a simulated dataset; exported HTML, CSV and JSON evidence with SHA-256 integrity hashes.
 - Documented employee onboarding/offboarding, VPN troubleshooting, MFA recovery and security escalation workflows, with sample support tickets and employee communications.
 

@@ -1,6 +1,6 @@
-# IT Support Operations Lab
+# Workplace Systems Lab
 
-A practical entry-level IT support portfolio: review employee access, endpoint inventory, SaaS seats and ticket queues; produce evidence; explain remediation to an IT Lead.
+A practical systems operations lab for reviewing identities, endpoint posture, application access, asset lifecycles and operational evidence. Includes automated checks, prioritized findings and documented workflows.
 
 **Independent learning project. All employee records and incidents are fictional.** No live Google Workspace, identity provider, VPN or MDM is connected. This project does not establish SOC 2, HIPAA or PCI DSS compliance.
 
@@ -23,7 +23,7 @@ The sample date is fixed for reproducibility. Pass your actual review date when 
 
 ## What it demonstrates
 
-| IT support responsibility | Working artifact |
+| Operations area | Working artifact |
 | --- | --- |
 | Identity and access reviews | Flags departed users, missing MFA and privileged access requiring review |
 | Laptop inventory | Windows, macOS and Linux sample assets; ownership, encryption, antivirus and MDM checks |
