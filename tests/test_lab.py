@@ -23,11 +23,11 @@ class LabTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=lab.ROOT / 'work') as tmp:
             folder = Path(tmp)
             lab.export(result, folder)
-            self.assertIn('&lt;script&gt;', (folder / 'report.html').read_text())
+            self.assertIn('&lt;script&gt;', (folder / 'report.html').read_text(encoding='utf-8'))
             with (folder / 'findings.csv').open(newline='') as handle:
                 first = next(csv.DictReader(handle))
             self.assertTrue(first['subject'].startswith("'="))
-            manifest = json.loads((folder / 'manifest.json').read_text())
+            manifest = json.loads((folder / 'manifest.json').read_text(encoding='utf-8'))
             for name, digest in manifest['sha256'].items():
                 self.assertEqual(lab.hashlib.sha256((folder / name).read_bytes()).hexdigest(), digest)
 

@@ -1,5 +1,7 @@
 # Workplace Systems Lab
 
+![Workplace Systems Lab overview](assets/overview.svg)
+
 A practical systems operations lab for reviewing identities, endpoint posture, application access, asset lifecycles and operational evidence. Includes automated checks, prioritized findings and documented workflows.
 
 **Independent learning project. All employee records and incidents are fictional.** No live Google Workspace, identity provider, VPN or MDM is connected. This project does not establish SOC 2, HIPAA or PCI DSS compliance.

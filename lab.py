@@ -85,23 +85,18 @@ def export(result, folder):
             # Protect spreadsheet consumers from formula interpretation.
             writer.writerow({k: "'" + v if v.startswith(('=', '+', '-', '@', '\t', '\r', '\n')) else v
                              for k, v in finding.items()})
-    rows = ''.join('<tr>' + ''.join('<td>' + html.escape(str(f[k])) + '</td>' for k in fields) + '</tr>'
+    rows = ''.join('<tr data-severity="' + html.escape(f['severity'], quote=True) + '">' + ''.join('<td>' + html.escape(str(f[k])) + '</td>' for k in fields) + '</tr>'
                    for f in result['findings'])
-    page = '''<!doctype html><html lang="en"><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Workplace Systems Lab — Evidence Report</title>
-<style>body{font:16px system-ui;background:#eef3fa;color:#15263c;margin:0;padding:4vw}
-main{max-width:1300px;margin:auto}h1{font-size:36px}aside{background:#123455;color:white;padding:24px;border-radius:12px}
-table{border-collapse:collapse;background:white;width:100%;margin-top:24px}th,td{text-align:left;padding:14px;border-bottom:1px solid #d9e2ee;vertical-align:top}
-th{background:#dce8f7}.scroll{overflow:auto}footer{margin-top:24px;color:#43556c}</style><main>
-<p>WORKPLACE SYSTEMS / OPERATIONS / OFFLINE LAB</p><h1>Employee access & endpoint review</h1>
-<aside>SIMULATED DATA — No live systems connected. Findings are review tasks, not proof of compliance.<br>
-As of: ASOF · USERS users · ASSETS assets · COUNT findings · $SAVINGS/month potential seat savings</aside>
-<div class="scroll"><table><thead><tr><th>Severity</th><th>Control</th><th>Subject</th><th>Finding</th><th>Next action</th></tr></thead>
-<tbody>ROWS</tbody></table></div><footer>Prepared for IT Lead review. All remediation requires verification and applicable authorization.</footer></main></html>'''
-    for key, value in [('ASOF', result['as_of']), ('USERS', result['users']), ('ASSETS', result['assets']),
-                       ('COUNT', len(result['findings'])), ('SAVINGS', f"{result['potential_monthly_savings_usd']:.2f}")]:
-        page = page.replace(key, html.escape(str(value)))
+    page = (ROOT / 'report-template.html').read_text(encoding='utf-8')
+    counts = {level: sum(f['severity'] == level for f in result['findings'])
+              for level in ('critical', 'high', 'medium')}
+    replacements = {'ASOF': result['as_of'], 'USERS': result['users'], 'ASSETS': result['assets'],
+                    'COUNT': len(result['findings']), 'SAVINGS': f"{result['potential_monthly_savings_usd']:.2f}"}
+    for level, count in counts.items():
+        replacements[level.upper() + '_WIDTH'] = f"{100 * count / max(1, len(result['findings'])):.3f}"
+        replacements[level.upper()] = count
+    for key in sorted(replacements, key=len, reverse=True):
+        page = page.replace(key, html.escape(str(replacements[key])))
     page = page.replace('ROWS', rows)
     (folder / 'report.html').write_text(page, encoding='utf-8', newline='\n')
     manifest = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
