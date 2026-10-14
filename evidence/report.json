@@ -1,0 +1,101 @@
+{
+  "as_of": "2026-10-14",
+  "simulated": true,
+  "users": 6,
+  "assets": 6,
+  "tickets": 4,
+  "potential_monthly_savings_usd": 39.0,
+  "findings": [
+    {
+      "severity": "critical",
+      "control": "Access review",
+      "subject": "casey@example.test",
+      "detail": "Departed employee has active account",
+      "action": "Verify HR authorization; suspend account, revoke sessions and SaaS access; preserve data per policy."
+    },
+    {
+      "severity": "high",
+      "control": "MFA",
+      "subject": "blair@example.test",
+      "detail": "Active account lacks MFA",
+      "action": "Verify identity and enroll MFA; never request passwords or verification codes."
+    },
+    {
+      "severity": "high",
+      "control": "Least privilege",
+      "subject": "ellis@example.test",
+      "detail": "Non-IT administrator requires review",
+      "action": "Ask application owner to confirm documented business need; remove only after approval."
+    },
+    {
+      "severity": "high",
+      "control": "Endpoint posture",
+      "subject": "LAP-002",
+      "detail": "Disk encryption missing or unverified",
+      "action": "Validate in endpoint console; remediate through approved policy and collect fresh evidence."
+    },
+    {
+      "severity": "high",
+      "control": "Asset lifecycle",
+      "subject": "LAP-003",
+      "detail": "Assigned to unknown or departed employee",
+      "action": "Confirm custody and arrange tracked return; record receipt and approved sanitization."
+    },
+    {
+      "severity": "high",
+      "control": "Endpoint posture",
+      "subject": "LAP-003",
+      "detail": "Antivirus missing or unverified",
+      "action": "Validate in endpoint console; remediate through approved policy and collect fresh evidence."
+    },
+    {
+      "severity": "high",
+      "control": "Endpoint posture",
+      "subject": "LAP-003",
+      "detail": "MDM enrollment missing or unverified",
+      "action": "Validate in endpoint console; remediate through approved policy and collect fresh evidence."
+    },
+    {
+      "severity": "high",
+      "control": "Ticket queue",
+      "subject": "INC-003",
+      "detail": "Open ticket past due date",
+      "action": "Update employee, document next action and escalate to IT Lead."
+    },
+    {
+      "severity": "medium",
+      "control": "Endpoint visibility",
+      "subject": "LAP-003",
+      "detail": "Last check-in 43 days ago",
+      "action": "Contact owner; confirm connectivity and management agent health."
+    },
+    {
+      "severity": "medium",
+      "control": "SaaS license review",
+      "subject": "casey@example.test / Google Workspace",
+      "detail": "Potential reclaimable seat: $14.00/month",
+      "action": "Confirm retention, ownership transfer and contract terms before removing seat."
+    },
+    {
+      "severity": "medium",
+      "control": "SaaS license review",
+      "subject": "casey@example.test / Slack",
+      "detail": "Potential reclaimable seat: $9.00/month",
+      "action": "Confirm retention, ownership transfer and contract terms before removing seat."
+    },
+    {
+      "severity": "medium",
+      "control": "SaaS license review",
+      "subject": "casey@example.test / Zoom",
+      "detail": "Potential reclaimable seat: $16.00/month",
+      "action": "Confirm retention, ownership transfer and contract terms before removing seat."
+    },
+    {
+      "severity": "medium",
+      "control": "Ticket queue",
+      "subject": "INC-001",
+      "detail": "Open ticket past due date",
+      "action": "Update employee, document next action and escalate to IT Lead."
+    }
+  ]
+}

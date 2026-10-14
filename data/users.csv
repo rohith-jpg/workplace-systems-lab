@@ -1,0 +1,7 @@
+email,department,employment_status,account_status,mfa,role
+alex@example.test,Finance,active,active,enabled,user
+blair@example.test,Engineering,active,active,disabled,user
+casey@example.test,Sales,departed,active,enabled,user
+devon@example.test,IT,active,active,enabled,admin
+ellis@example.test,Finance,active,active,enabled,admin
+frankie@example.test,People,active,active,enabled,user

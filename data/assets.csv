@@ -1,0 +1,7 @@
+asset_id,platform,owner,status,encrypted,antivirus,mdm,last_checkin
+LAP-001,Windows,alex@example.test,assigned,yes,yes,yes,2026-10-13
+LAP-002,macOS,blair@example.test,assigned,no,yes,yes,2026-10-12
+LAP-003,Linux,casey@example.test,assigned,yes,no,no,2026-09-01
+LAP-004,Windows,devon@example.test,assigned,yes,yes,yes,2026-10-14
+LAP-005,macOS,ellis@example.test,assigned,yes,yes,yes,2026-10-12
+LAP-006,Windows,,stock,yes,yes,yes,2026-10-10

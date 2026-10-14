@@ -1,0 +1,14 @@
+severity,control,subject,detail,action
+critical,Access review,casey@example.test,Departed employee has active account,"Verify HR authorization; suspend account, revoke sessions and SaaS access; preserve data per policy."
+high,MFA,blair@example.test,Active account lacks MFA,Verify identity and enroll MFA; never request passwords or verification codes.
+high,Least privilege,ellis@example.test,Non-IT administrator requires review,Ask application owner to confirm documented business need; remove only after approval.
+high,Endpoint posture,LAP-002,Disk encryption missing or unverified,Validate in endpoint console; remediate through approved policy and collect fresh evidence.
+high,Asset lifecycle,LAP-003,Assigned to unknown or departed employee,Confirm custody and arrange tracked return; record receipt and approved sanitization.
+high,Endpoint posture,LAP-003,Antivirus missing or unverified,Validate in endpoint console; remediate through approved policy and collect fresh evidence.
+high,Endpoint posture,LAP-003,MDM enrollment missing or unverified,Validate in endpoint console; remediate through approved policy and collect fresh evidence.
+high,Ticket queue,INC-003,Open ticket past due date,"Update employee, document next action and escalate to IT Lead."
+medium,Endpoint visibility,LAP-003,Last check-in 43 days ago,Contact owner; confirm connectivity and management agent health.
+medium,SaaS license review,casey@example.test / Google Workspace,Potential reclaimable seat: $14.00/month,"Confirm retention, ownership transfer and contract terms before removing seat."
+medium,SaaS license review,casey@example.test / Slack,Potential reclaimable seat: $9.00/month,"Confirm retention, ownership transfer and contract terms before removing seat."
+medium,SaaS license review,casey@example.test / Zoom,Potential reclaimable seat: $16.00/month,"Confirm retention, ownership transfer and contract terms before removing seat."
+medium,Ticket queue,INC-001,Open ticket past due date,"Update employee, document next action and escalate to IT Lead."

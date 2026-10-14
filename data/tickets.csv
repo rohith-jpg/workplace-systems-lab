@@ -1,0 +1,5 @@
+ticket_id,category,priority,status,due_date,owner
+INC-001,VPN,P2,in_progress,2026-10-13,devon@example.test
+INC-002,MFA,P2,open,2026-10-15,devon@example.test
+INC-003,Security,P1,escalated,2026-10-13,devon@example.test
+REQ-004,Onboarding,P3,closed,2026-10-10,devon@example.test
